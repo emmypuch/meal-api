@@ -1,5 +1,5 @@
 <template>
-  <div>Meal Lists</div>
+  <div>Search By Letters</div>
 </template>
 
 <script setup></script>
