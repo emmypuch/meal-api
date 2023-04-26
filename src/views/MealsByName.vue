@@ -9,12 +9,16 @@
     />
   </div>
   <div>
-    <div v-for="meal of meals" :key="meal.idMeal">
-      <img :src="meal.strMealThumb" alt="strMeal" />
+    <div
+      v-for="meal of meals"
+      :key="meal.idMeal"
+      class="grid grid-cols-1 md:grid-cols-3"
+    >
+      <img :src="meal.strMealThumb" :alt="strMeal" />
       <h3>{{ meal.strMeal }}</h3>
       <div>
-        <a :href="meal.strYoutube" target="_blank">View</a>
-        <router-link to="/">YouTube</router-link>
+        <a :href="meal.strYoutube" target="_blank">YouTube</a>
+        <router-link to="/">View</router-link>
       </div>
     </div>
   </div>
