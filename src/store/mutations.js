@@ -1,3 +1,3 @@
 export function setSearchedMeals(state, meals) {
-  state.setSearchedMeals = meals;
+  state.searchedMeals = meals;
 }
