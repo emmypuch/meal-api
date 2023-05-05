@@ -8,8 +8,8 @@
       {{ letter }}
     </router-link>
   </div>
-  <div class="bg-red-500">
-    <pre>{{ meals }}</pre>
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-5 p-8">
+    <MealItem v-for="meal of meals" :key="meal.idMeal" :meal="meal" />
   </div>
 </template>
 
@@ -17,6 +17,7 @@
 import { computed } from "@vue/reactivity";
 import { onMounted } from "vue";
 import { useRoute } from "vue-router";
+import MealItem from "../components/MealItem.vue";
 import store from "../store/index.js";
 
 const route = useRoute();
