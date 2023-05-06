@@ -2,12 +2,14 @@
   <div class="p-8">
     <h1 class="text-4xl font-bold mb-4">Ingredients</h1>
     <router-link
-      :to="{ name: 'byIngredient', params: { ingredient: idIngredients } }"
+      :to="{
+        name: 'byIngredient',
+        params: { ingredient: ingredient.idIngredient },
+      }"
       v-for="ingredient of ingredients"
       :key="ingredient.id"
       class="block bg-white rounded p-3 mb-3 shadow"
     >
-      <pre>{{ ingredient }}</pre>
       <h3 class="text-2xl font-bold mb-2">{{ ingredient.strIngredient }}</h3>
       <p>{{ ingredient.strDescription }}</p>
     </router-link>
